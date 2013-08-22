@@ -1,0 +1,10 @@
+[program:redis]
+command=/usr/sbin/redis-server
+numprocs=1
+autostart=true
+autorestart=true
+
+[program:sshd]
+command=/usr/sbin/sshd -D
+autostart=true
+autorestart=true

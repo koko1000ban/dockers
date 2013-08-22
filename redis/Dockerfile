@@ -25,11 +25,4 @@ EXPOSE 22
 RUN yum install -y supervisor
 RUN cat /src/Supervisorfile >> /etc/supervisord.conf
 
-
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"] 
-
-
-# dame...
-#CMD /usr/sbin/sshd -D
-#CMD ["/usr/sbin/redis-server | (sleep 1 && /usr/sbin/sshd -D)"]
-#CMD "/usr/sbin/redis-server"

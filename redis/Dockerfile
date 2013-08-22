@@ -1,5 +1,6 @@
 # DOCKER-VERSION 0.3.4
 FROM    centos:6.4
+MAINTAINER Tabito Ohtani "koko1000ban@gmail.com"
 
 RUN  rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 

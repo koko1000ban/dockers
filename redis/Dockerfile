@@ -17,7 +17,7 @@ RUN yum install -y openssh-server openssh-clients
 RUN echo 'root:root' | chpasswd
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 
-## Permit error message 'Could not load host key: ...'
+## Suppress error message 'Could not load host key: ...'
 RUN /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
 RUN /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
 EXPOSE 22
